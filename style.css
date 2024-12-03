@@ -1,0 +1,753 @@
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif !important;
+}
+
+body {
+    background-color: #d6cefb; /* Fundo branco */
+    color: #333; /* Texto escuro */
+    font-size: 30px;
+
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+h2.titulo {
+    color: #333;
+    font-size: 40px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #7d66f1;
+}
+
+/* Personalização do botão de Contato */
+.btn-contato button {
+    padding: 12px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #f371c1; /* Rosa vibrante */
+    color: #fff;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    background-color: #7d66f1; /* Hover roxo */
+    color: #fff;
+}
+
+/* CABEÇALHO */
+header {
+    padding: 40px 4%;
+    background-color: #fffefe;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #7d66f1, #f371c1); /* Gradiente */
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 30px;
+ }
+
+header nav.menu-desktop a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* Menu Mobile */
+
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+
+.menu-mobile nav ul li a:hover {
+    background-color: #7d66f1;
+    color: #fff;
+}
+
+
+/* SEÇÃO COM O FUNDO NEUTRO */
+section.card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Preenche toda a altura da tela */
+    background-color: #f4f4f4; /* Fundo neutro */
+    padding: 20px;
+}
+
+.topo-do-site {
+    background-color:#ddd7fb !important;
+
+
+}
+/* Card */
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 90%; /* Responsividade */
+    max-width: 500px; /* Tamanho máximo do card */
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.3s ease; /* Animação de hover mais suave */
+    overflow: hidden; /* Esconde parte do conteúdo para um efeito de transição suave */
+    position: relative;
+}
+/* Animação de Hover - Elevando o card e mudando a sombra */
+.card:hover {
+    transform: translateY(-15px); /* Card se eleva mais para cima */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15); /* Aumenta a sombra para mais profundidade */
+}
+
+/* Título do Card */
+.card h2 {
+    color: #333;
+    font-size: 1.5rem; /* Tamanho maior para o título */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Texto do Card */
+.card p {
+    color: #2e2d2d; /* Um tom de cinza para o texto */
+    font-size: 1.12rem; /* Tamanho de fonte maior */
+    line-height: 1.6; /* Melhora a legibilidade */
+    margin-bottom: 25px; /* Espaçamento maior entre o texto e o botão */
+}
+
+/* Efeito de sombra adicional durante o hover */
+.card::after {
+    content: '';
+    position: relative;;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::after {
+    opacity: 1; /* Sombra mais forte e sutil no hover */
+}
+
+/* Botão */
+.card .btn {
+    background-color: #7d66f1; /* Cor do botão */
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito no hover */
+    text-transform: uppercase;
+}
+
+/* Animação e cor do botão no hover */
+.card .btn:hover {
+    background-color: #f371c1; /* Cor do botão ao passar o mouse */
+    transform: translateY(-5px); /* Botão se eleva mais */
+}
+
+
+
+/* Seção Missão, Visão e Valores */
+.missao-visao-valores {
+    padding: 50px 4%;
+    background-color: #ac9cff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.missao-visao-valores .titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #4425df;
+}
+
+.missao-visao-valores .flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Cards Missão, Visão e Valores */
+.missao-visao-valores .card {
+    background-color: #d9d1ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    transition: all 0.3s ease;
+}
+
+.missao-visao-valores .card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.missao-visao-valores .card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Efeito de hover nos cards */
+.missao-visao-valores .card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* SEÇÃO SOBRE */
+section.sobre {
+    padding: 80px 5%; /* Ajuste do espaçamento para garantir margens simétricas */
+    background-color: #e3dcfe;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    border-radius: 12px; /* Bordas arredondadas para um visual moderno */
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos dentro da seção se ajustem */
+    justify-content: center;
+}
+
+section.sobre:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Sombra mais forte ao passar o mouse */
+}
+
+.sobre {
+    padding: 40px 0;
+}
+
+.interface {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap; /* Faz com que o conteúdo se reorganize quando não houver espaço suficiente */
+    justify-content: center;
+    gap: 20px;
+}
+
+.img-sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1 1 300px; /* Permite que as imagens encolham até 300px e cresçam quando necessário */
+}
+
+#Sobre1, #Sobre2 {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+.txt-sobre {
+    max-width: 700px;
+    text-align: justify;
+    flex: 1 1 300px; /* Permite que o texto se ajuste à largura disponível */
+    font-size: medium;
+}
+
+.txt-sobre h2 {
+    font-size: 2.5rem; /* Tamanho maior para destaque */
+    font-weight: bold; /* Tornar o texto mais forte */
+    color: #f437ac; /* Cor escura para boa leitura */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    text-align: center; /* Centraliza o título */
+    text-transform: uppercase; /* Deixa o texto todo em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre as letras para dar um ar mais elegante */
+}
+
+
+.txt-sobre ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: medium;
+}
+
+.txt-sobre p, .txt-sobre ul {
+    line-height: 1.6;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/*sobre nos*/
+.sobrenos .card {
+    padding: 50px 4%;
+    background-color:  #fdcfec !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.sobrenos  .titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #f437ac;
+}
+
+.sobrenos  .flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Cards .sobrenos */
+.sobrenos  {
+    background-color: #fd8ed2;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    flex: 1;
+    min-width: 180px;
+    transition: all 0.3s ease;
+}
+
+.sobrenos .card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.sobrenos  .card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Efeito de hover nos cards */
+.sobrenos  .card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+
+
+
+
+/* Personalização do botão social */
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f371c1;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.btn-social button:hover {
+    background-color: #7d66f1;
+}
+
+/* FORMULÁRIO DE FALANDO CONOSCO */
+section.formulario {
+    padding: 35px 4%;
+    background-color: #bbaef9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #f4f4f4; /* Fundo claro */
+    border: 1px solid #ddd;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: #f371c1;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 30px;
+    padding: 12px 0;
+    border: none;
+    text-transform: uppercase;
+}
+
+form .btn-enviar input:hover {
+    background-color: #7d66f1;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .missao-visao-valores .flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    section.sobre {
+        padding: 40px 8%;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .topo-do-site h1 {
+        font-size: 32px;
+    }
+
+    .formulario form {
+        width: 90%;
+    }
+}
+
+
+
+/* Estilos dos Cards - Missão, Visão e Valores */
+.sobrenos .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+.sobrenos .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    flex-basis: 22%;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobrenos .card img {
+    width: 80%;
+    height: 200px; /* Tamanho fixo para as imagens quadradas */
+    object-fit: cover; /* Garantir que a imagem cubra o espaço sem distorcer */
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.sobrenos .card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.sobrenos .card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.sobrenos .card:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsividade para os Cards */
+@media (max-width: 768px) {
+    .sobrenos .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobrenos .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #333; /* Cor de fundo escura para o rodapé */
+    color: #fff; /* Cor do texto branca */
+    padding: 50px 4%;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px; /* Espaçamento entre o conteúdo principal e o rodapé */
+    position: relative;
+    overflow: hidden; /* Impede que a imagem ultrapasse os limites do rodapé */
+}
+
+/* Imagem de fundo */
+footer .line-footer {
+    position: relative;
+    width: 100%;
+    height: 50px; /* Defina uma altura adequada para o rodapé */
+}
+
+footer #Sobre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem cobrir toda a área sem distorção */
+    z-index: -1; /* A imagem fica atrás do conteúdo */
+}
+
+/* Título do Rodapé */
+footer h2 {
+    font-size: 4.0rem;
+    margin-bottom: 20px;
+    color: #7d66f1; /* Cor roxa para destacar */
+    font-weight: 600;
+}
+
+/* Links do Rodapé */
+footer a {
+    color: #fff;
+    font-size: 1.125rem;
+    margin: 10px 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Hover nos Links */
+footer a:hover {
+    color: #e2a1c9; /* Cor rosa no hover */
+    transform: scale(1.1); /* Leve aumento de tamanho ao passar o mouse */
+}
+
+
+footer {
+    background-image: url('images/rodape.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 50px 1%;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+}
+
+/* SEÇÃO COM O FUNDO NEUTRO */
+/* Estilização do botão com a seta */
+.scroll-down {
+    display: block;
+    margin: 20px auto;
+    font-size: 30px;
+    text-align: center;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.scroll-down:hover {
+    color: #000;
+}
+
+/* Ajustes gerais */
+.topo-do-site {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.topo-card {
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.video-container {
+    align-items: center !important;
+    display: flex;
+}
+
+.texto-container {
+    font-size: 70%;
+    text-align: center;
+}
+
+
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .topo-card {
+        padding: 20px; /* Adiciona algum espaço nas laterais em telas pequenas */
+    }
+
+}
+
+h2 .topo {
+    font-size: large;
+    color: #7d66f1;
+    text-transform: uppercase;
+}
+.topo-texto{
+    font-size: large;
+}
+
+
+/* Seção sobre */
+.sobre .flex {
+    display: flex; /* Usando Flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: flex-start; /* Alinhamento no topo */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
+}
+
+/* Imagem na seção sobre */
+.sobre .img-sobre {
+    max-width: 350px; /* Define a largura máxima da imagem */
+    flex: 1; /* Faz a imagem ocupar o espaço disponível, mas sem exceder */
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+.sobre .txt-sobre {
+    flex: 2; /* O texto ocupará mais espaço que a imagem */
+    max-width: 800px; /* Limita a largura para um texto mais legível */
+
+}
+
+
+
+
+
+
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Ajuste conforme necessário */
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    text-align: center;
+}
+
+.carousel-item img,
+.carousel-item video {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

@@ -21,3 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCarousel();
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".carousel-item");
+    const progressBar = document.querySelector(".progress");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active"); // Remove o slide ativo
+            if (i === index) slide.classList.add("active"); // Ativa o novo slide
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length; // Avança para o próximo slide
+        showSlide(currentIndex);
+    }
+
+    // Troca de slide a cada 5 segundos
+    setInterval(() => {
+        nextSlide();
+        restartProgressBar();
+    }, 5000);
+
+    function restartProgressBar() {
+        progressBar.style.animation = "none";
+        setTimeout(() => {
+            progressBar.style.animation = "";
+        }, 10);
+    }
+});

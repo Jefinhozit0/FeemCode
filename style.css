@@ -1,4 +1,56 @@
-/* ESTILO GERAL */
+/* Estilo geral */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Transição suave */
+}
+
+.carousel-item {
+    min-width: 100%;
+    opacity: 0; /* Inicia invisível */
+    transform: scale(0.95); /* Slide menor (efeito zoom-out) */
+    transition: opacity 1s ease, transform 1s ease; /* Efeito fade + zoom */
+}
+
+.carousel-item.active {
+    opacity: 1; /* Slide ativo visível */
+    transform: scale(1); /* Retorna ao tamanho original */
+}
+
+/* Barra de progresso */
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(to right, #6a1b9a, #8e44ad);
+    width: 0;
+    animation: progressAnimation 5s linear infinite;
+}
+
+@keyframes progressAnimation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;

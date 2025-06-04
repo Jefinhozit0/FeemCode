@@ -13,7 +13,7 @@ Este projeto é uma aplicação web simples voltada para o gerenciamento de info
 
 1. Clone o repositório (caso ainda não tenha feito):
    ```bash
-   git clone <URL-do-repositório>
+   git clone(https://github.com/Jefinhozit0/FeemCode)
    ```
 
 2. Navegue até o diretório do projeto:
@@ -34,6 +34,3 @@ Este projeto é uma aplicação web simples voltada para o gerenciamento de info
 - O projeto não utiliza nenhum framework externo.
 - Pode ser utilizado como base para estudos de front-end, especialmente conceitos de estrutura de pastas, manipulação de DOM e estilização de componentes.
 
-## 🧑‍💻 Autor
-
-Projeto desenvolvido por [Seu Nome Aqui].
